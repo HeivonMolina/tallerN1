@@ -18,7 +18,7 @@ namespace Banco.Core.Domain.Test
         3.1 La consignación inicial debe ser de mínimo 100 mil pesos.
         3.2 El valor consignado debe ser adicionado al saldo de la cuenta.*/
         [Test]
-        public void NoPuedoConsignarNumeroNegativo()
+        public void NoPuedoConsignarNumeroNegativoTest()
         {
             //Preparar
             var cuentaCorriente = new CuentaCorriente(numero: "10001", nombre: "Cuenta Ejemplo", ciudad: "Valledupar");
@@ -28,7 +28,7 @@ namespace Banco.Core.Domain.Test
             Assert.AreEqual("El valor a consignar es incorrecto", resultado);
         }
         [Test]
-        public void NoPuedoConsignarMenosDe100Mil()
+        public void NoPuedoConsignarMenosDe100MilTest()
         {
             //Preparar
             var cuentaCorriente = new CuentaCorriente(numero: "10001", nombre: "Cuenta Ejemplo", ciudad: "Valledupar");
@@ -39,7 +39,7 @@ namespace Banco.Core.Domain.Test
         }
 
         [Test]
-        public void PuedoConsignar100MilPrimeraVez()
+        public void PuedoConsignar100MilPrimeraVezTest()
         {
             //Preparar
             var cuentaCorriente = new CuentaCorriente(numero: "10001", nombre: "Cuenta Ejemplo", ciudad: "Valledupar");
@@ -56,7 +56,7 @@ namespace Banco.Core.Domain.Test
         4.1 El valor a retirar se debe descontar del saldo de la cuenta.*/
 
         [Test]
-        public void NoPuedoRetirarSiNoHAySaldo()
+        public void NoPuedoRetirarSiNoHAySaldoTest()
         {
             //Preparar
             var cuentaCorriente= new CuentaCorriente(numero: "10001", nombre: "Cuenta Ejemplo", ciudad: "Valledupar");
@@ -71,7 +71,7 @@ namespace Banco.Core.Domain.Test
         }
 
         [Test]
-        public void PuedoRetirar()
+        public void PuedoRetirarTest()
         {
             //Preparar
             var cuentaCorriente = new CuentaCorriente(numero: "10001", nombre: "Cuenta Ejemplo", ciudad: "Valledupar");

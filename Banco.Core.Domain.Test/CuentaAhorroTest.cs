@@ -123,7 +123,7 @@ namespace Banco.Core.Domain.Test
         }
 
         [Test]
-        public  void NoPuedoRetirarSiNoHAySaldo()
+        public  void NoPuedoRetirarSiNoHAySaldoTest()
         {
             //Preparar
             var cuentaAhorro = new CuentaAhorro(numero: "10001", nombre: "Cuenta Ejemplo", ciudad: "Valledupar");
